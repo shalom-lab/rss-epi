@@ -1,15 +1,15 @@
 [
   {
-    "id": "chinaepi",
+    "id": "中华流病",
     "title": "中华流病",
     "url": "http://chinaepi.icdc.cn/download_upload_file.aspx?file_name=/rss/zhlxbx/cn/current.xml",
-    "category": "当期目录"
+    "category": "中华流病"
   },
   {
-    "id": "epidemiology",
-    "title": "epidemiology",
+    "id": "Epidemiology",
+    "title": "Epidemiology",
     "url": "https://digitalcommons.unmc.edu/coph_epidem_articles/recent.rss",
-    "category": "epidemiology",
+    "category": "Epidemiology",
     "timestamp": "2025-03-18T09:23:00.483Z"
   },
   {
