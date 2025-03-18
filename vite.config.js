@@ -4,7 +4,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/rss-reader/',  // 确保这里填写的是你的仓库名
+  base: '/rss-epi/',  // 确保这里填写的是你的仓库名
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
