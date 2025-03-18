@@ -67,5 +67,12 @@
     "url": "https://tools.cdc.gov/api/v2/resources/media/342778.rss",
     "category": "MMWR",
     "timestamp": "2025-03-18T10:34:11.962Z"
+  },
+  {
+    "id": "CCDC",
+    "title": "CCDC",
+    "url": "https://weekly.chinacdc.cn/rss/current.xml",
+    "category": "CCDC",
+    "timestamp": "2025-03-18T10:35:32.275Z"
   }
 ]
