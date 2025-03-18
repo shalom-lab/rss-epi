@@ -46,5 +46,12 @@
     "url": "https://ajph.aphapublications.org/action/showFeed?type=etoc&feed=rss&jc=ajph",
     "category": "AJPH",
     "timestamp": "2025-03-18T09:40:10.918Z"
+  },
+  {
+    "id": "AoE",
+    "title": "AoE",
+    "url": "chrome-extension://kefjpfngnndepjbopdmoebkipbgkggaa/tabs/preview.html?url=https%3A%2F%2Frss.sciencedirect.com%2Fpublication%2Fscience%2F10472797",
+    "category": "AoE",
+    "timestamp": "2025-03-18T09:45:51.040Z"
   }
 ]
