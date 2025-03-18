@@ -39,5 +39,12 @@
     "url": "https://ije-blog.com/feed/",
     "category": "IJE",
     "timestamp": "2025-03-18T09:34:38.234Z"
+  },
+  {
+    "id": "AJPH",
+    "title": "AJPH",
+    "url": "https://ajph.aphapublications.org/action/showFeed?type=etoc&feed=rss&jc=ajph",
+    "category": "AJPH",
+    "timestamp": "2025-03-18T09:40:10.918Z"
   }
 ]
