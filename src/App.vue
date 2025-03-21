@@ -112,6 +112,6 @@ import ArticleList from './components/ArticleList.vue'
 }
 
 svg:hover {
-  color: #c91f1f;
+  color: #3b82f6;
 }
 </style>
