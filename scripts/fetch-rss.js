@@ -25,14 +25,6 @@ try {
   process.exit(1);
 }
 
-// 从 RSS 配置中获取唯一的分类
-const getCategories = (sources) => {
-  const uniqueCategories = new Set(sources.map(source => source.category));
-  return Array.from(uniqueCategories).map(category => ({
-    id: category,
-    name: category
-  }));
-};
 
 
 // 添加超时处理的辅助函数
@@ -51,6 +43,15 @@ const fetchWithTimeout = async (source) => {
   }
 };
 
+// 过滤最新文章
+const filter_latest = (article, latestDays) => {
+  const date = new Date(article.pubDate);
+  const now = new Date();
+  const diffTime = Math.abs(now - date);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  return diffDays <= latestDays;
+}
+
 async function fetchRSS() {
   try {
     let allArticles = [];
@@ -61,7 +62,7 @@ async function fetchRSS() {
         console.log(`Fetching from ${source.title}...`);
         const feed = await fetchWithTimeout(source);
 
-        const articles = feed.items.map(item => ({
+        let articles = feed.items.map(item => ({
           id: source.id,
           title: item.title,
           description: item.contentSnippet || item.description || '',
@@ -70,7 +71,14 @@ async function fetchRSS() {
           source: source.title,
           category: source.category
         }));
-
+        //按title去重
+        articles = articles.filter((article, index, self) =>
+          index === self.findIndex(t => t.title === article.title)
+        );
+        //filter
+        if (['MMWR', 'EJD', 'Epidemiology', 'AJPH'].includes(source.id)) {
+          articles = articles.filter(article => filter_latest(article, 60));
+        }
         console.log(`Successfully fetched ${articles.length} articles from ${source.title}`);
         allArticles = [...allArticles, ...articles];
       } catch (error) {
