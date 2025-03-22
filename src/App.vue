@@ -86,7 +86,7 @@ import ArticleList from './components/ArticleList.vue'
 }
 
 .wechat::after {
-  content: '欢迎关注公众号';
+  content: '欢迎关注微信公众号';
   position: absolute;
   width: 200px;
   height: 20px;
