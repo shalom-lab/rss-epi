@@ -53,5 +53,13 @@
     "url": "https://tools.cdc.gov/api/v2/resources/media/342778.rss",
     "category": "MMWR",
     "timestamp": "2025-03-18T10:34:11.962Z"
+  },
+  {
+    "id": "ReSViNET",
+    "title": "ReSViNET",
+    "url": "https://resvinet.org/feed",
+    "website": "ReSViNET",
+    "category": "RSV",
+    "timestamp": "2025-04-02T07:49:15.225Z"
   }
 ]
