@@ -6,12 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "fetch-puppeteer": "node scripts/fetch-puppeteer.js",
     "fetch-rss": "node scripts/fetch-rss.js",
     "preview": "vite preview"
   },
   "dependencies": {
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.10.0",
+    "rss-parser": "^3.13.0",
     "vue": "^3.3.0",
-    "rss-parser": "^3.13.0"
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.0",
@@ -20,4 +24,4 @@
     "tailwindcss": "^3.3.5",
     "vite": "^4.5.0"
   }
-} 
+}
