@@ -104,8 +104,8 @@ async function extractData_chinaepi(page) {
 // 使用Puppeteer抓取数据
 async function fetchWithPuppeteer(url, source) {
   const browser = await puppeteer.launch({
-    headless: false,
-    args: ['--disable-extensions', '--disable-features=HttpsFirstBalancedModeAutoEnable'],
+    headless: true,
+    args: ['--disable-extensions', '--disable-features=HttpsFirstBalancedModeAutoEnable', '--no-sandbox', '--disable-setuid-sandbox'],
     ignoreHTTPSErrors: true
   });
 
@@ -218,7 +218,7 @@ async function fetchSpecialRSS(ids = SpecialRssIds) {
       try {
         console.log(`Fetching from ${source.title}...`);
         let urls = [];
-        
+
         // 如果是中华流病，获取当前月和前两个月的文章
         if (source.id === '中华流病') {
           const now = new Date();
@@ -229,13 +229,13 @@ async function fetchSpecialRSS(ids = SpecialRssIds) {
           for (let i = 0; i < 3; i++) {
             let year = currentYear;
             let month = currentMonth - i;
-            
+
             // 处理月份小于1的情况
             if (month < 1) {
               month += 12;
               year -= 1;
             }
-            
+
             urls.push(`http://chinaepi.icdc.cn/zhlxbx/ch/reader/issue_list.aspx?year_id=${year}&quarter_id=${month}`);
           }
           console.log('Generated URLs:', urls);
